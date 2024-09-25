@@ -8,6 +8,7 @@ html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -21,11 +22,6 @@ html, body {
   flex-grow: 1;
 }
 
-section {
-  padding: 50px 0;
-  border-bottom: 1px solid #ddd;
-}
-
 section h1 {
   margin-bottom: 20px;
 }
@@ -33,4 +29,29 @@ section h1 {
 section p {
   font-size: 18px;
   line-height: 1.6;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#home {
+  background-color: #e0f7fa;
+}
+
+#about {
+  background-color: #ffccbc;
+}
+
+#projects {
+  background-color: #c8e6c9;
+}
+
+#contact {
+  background-color: #ffcdd2;
 }
