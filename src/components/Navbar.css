@@ -2,13 +2,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
   height: 100%;
-  background-color: blue;
+  background-color: blue; /* Ensure background color is set */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+.app.dark .navbar {
+  background-color: #1a1a1a; /* Example darker color for dark mode */
 }
 
 .navbar h2 {
