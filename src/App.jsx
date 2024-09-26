@@ -8,10 +8,10 @@ import './App.css';
 
   const App = () => {
 
-    const [darkMode, setDarkMode] = useState(false); // State to manage the theme
+    const [darkMode, setDarkMode] = useState(false); 
   
     const toggleDarkMode = () => {
-      setDarkMode(!darkMode); // Toggle dark mode
+      setDarkMode(!darkMode);
     };
     
   return (
