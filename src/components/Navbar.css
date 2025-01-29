@@ -3,16 +3,16 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: blue; /* Ensure background color is set */
+  background-color: blue; 
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+  transition: background-color 0.3s ease; 
 }
 
 .app.dark .navbar {
-  background-color: #1a1a1a; /* Example darker color for dark mode */
+  background-color: #1a1a1a; 
 }
 
 .navbar h2 {

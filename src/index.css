@@ -1,4 +1,5 @@
 :root {
+
   font-family: Courier,'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 600;
@@ -7,6 +8,17 @@
   background-color: #242424;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
 }
 
 h1 {
