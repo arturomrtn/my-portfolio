@@ -7,33 +7,17 @@ import Contact from './components/Contact';
 import './App.css';
 
 const App = () => {
-  const getInitialTheme = () => {
-    return localStorage.getItem('theme') === 'dark';
-  };
-
+  
+  const getInitialTheme = () => localStorage.getItem('theme') === 'dark';
   const [darkMode, setDarkMode] = useState(getInitialTheme);
 
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => {
-      const newMode = !prevMode;
-      localStorage.setItem('theme', newMode ? 'dark' : 'light');
-      return newMode;
-    });
-  };
-  
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark');
-      document.body.classList.remove('light');
-    } else {
-      document.body.classList.add('light');
-      document.body.classList.remove('dark');
-    }
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
   return (
-    <div className={darkMode ? 'app dark' : 'app'}>
-      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+    <div className={`app ${darkMode ? 'dark' : 'light'}`}>
+      <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
       <div className='content'>
         <Home />
         <About />
@@ -45,3 +29,4 @@ const App = () => {
 };
 
 export default App;
+
