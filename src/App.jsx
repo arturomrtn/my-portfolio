@@ -7,10 +7,11 @@ import Contact from './components/Contact';
 import './App.css';
 
 const App = () => {
-  
+  // Get initial theme from localStorage
   const getInitialTheme = () => localStorage.getItem('theme') === 'dark';
   const [darkMode, setDarkMode] = useState(getInitialTheme);
 
+  // Save theme preference in localStorage whenever darkMode changes
   useEffect(() => {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
