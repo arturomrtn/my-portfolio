@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useTypingEffect = (texts, speed = 100, delay = 1500) => {
+const useTypingEffect = (texts, speed = 100, delay = 2000) => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -9,17 +9,22 @@ const useTypingEffect = (texts, speed = 100, delay = 1500) => {
   useEffect(() => {
     const currentText = texts[index];
     const isTextComplete = charIndex === currentText.length;
-    const isTextEmpty = charIndex === 0;
+    const isTextEmpty = charIndex === 0 && isDeleting;
 
     const handleTyping = () => {
+      if (isTextEmpty) {
+        // Instantly switch to next text when deletion is finished
+        setIsDeleting(false);
+        setIndex((prev) => (prev + 1) % texts.length);
+        setCharIndex(0);
+        return;
+      }
+
       setText(currentText.slice(0, charIndex + (isDeleting ? -1 : 1)));
       setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
 
       if (isTextComplete && !isDeleting) {
         setTimeout(() => setIsDeleting(true), delay);
-      } else if (isTextEmpty && isDeleting) {
-        setIsDeleting(false);
-        setIndex((prev) => (prev + 1) % texts.length);
       }
     };
 
@@ -31,4 +36,3 @@ const useTypingEffect = (texts, speed = 100, delay = 1500) => {
 };
 
 export default useTypingEffect;
-
