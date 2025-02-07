@@ -13,7 +13,6 @@ const useTypingEffect = (texts, speed = 100, delay = 2000) => {
 
     const handleTyping = () => {
       if (isTextEmpty) {
-        // Instantly switch to next text when deletion is finished
         setIsDeleting(false);
         setIndex((prev) => (prev + 1) % texts.length);
         setCharIndex(0);

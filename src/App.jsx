@@ -9,6 +9,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
+  const [showNavbar, setShowNavbar] = useState(true);
 
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
@@ -16,8 +17,16 @@ const App = () => {
 
   return (
     <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
-      <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
-      <main className="pl-72">
+      {showNavbar && <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} toggleNavbar={() => setShowNavbar(false)} />}
+      {!showNavbar && (
+        <button
+          onClick={() => setShowNavbar(true)}
+          className="fixed top-4 left-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition z-50"
+        >
+          Show Navbar
+        </button>
+      )}
+      <main className={`${showNavbar ? "pl-72" : "pl-0"} transition-all`}>
         <Home darkMode={darkMode} />
         <About />
         <Projects />
@@ -28,5 +37,9 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
 
 

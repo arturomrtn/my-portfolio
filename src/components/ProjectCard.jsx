@@ -19,7 +19,6 @@ const ProjectCard = ({ title, description, techStack, link }) => {
           </span>
         ))}
       </div>
-
       <a
         href={link}
         target="_blank"
@@ -33,4 +32,5 @@ const ProjectCard = ({ title, description, techStack, link }) => {
 };
 
 export default ProjectCard;
+
 

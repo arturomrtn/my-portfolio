@@ -23,7 +23,7 @@ const Home = ({ darkMode }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage: `url('/images/${darkMode ? "kandinskydarkpainting.jpg" : "kandinskybluepainting.jpg"}')`,
         }}
@@ -59,5 +59,6 @@ const Home = ({ darkMode }) => {
 };
 
 export default Home;
+
 
 
