@@ -34,8 +34,8 @@ const Home = ({ darkMode }) => {
         transition={{ duration: 1, delay: 0.5 }}
         className="relative z-10"
       >
-        <h1 className={`text-5xl font-bold ${darkMode ? "text-green-400" : "text-black"}`}>
-          Welcome to My Portfolio
+        <h1 className={`text-6xl font-bold ${darkMode ? "text-green-400" : "text-black"}`}>
+          Hi! I'm Arturo.
         </h1>
 
         <motion.p
@@ -59,6 +59,4 @@ const Home = ({ darkMode }) => {
 };
 
 export default Home;
-
-
 

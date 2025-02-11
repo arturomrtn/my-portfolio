@@ -9,7 +9,7 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => (
     >
       Hide Navbar
     </button>
-    <h2 className="text-3xl font-thin mt-12">My Portfolio</h2>
+    <h2 className="text-3xl font-thin mt-12">art.dev</h2>
     <button 
       onClick={toggleDarkMode}
       className="px-5 py-2 border border-green-400 rounded-md hover:bg-green-400 hover:text-black transition"
@@ -29,6 +29,7 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => (
 );
 
 export default Navbar;
+
 
 
 
