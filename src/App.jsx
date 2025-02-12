@@ -21,7 +21,7 @@ const App = () => {
       {!showNavbar && (
         <button
           onClick={() => setShowNavbar(true)}
-          className="fixed top-4 left-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition z-50"
+          className="fixed top-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-400 transition z-50"
         >
           Show Navbar
         </button>

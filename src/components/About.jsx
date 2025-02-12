@@ -24,21 +24,44 @@ const About = ({ darkMode }) => {
       className={`min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium font-bold transition-all mt-6
       ${darkMode ? "bg-black text-green-400" : "bg-gray-100 text-black"}`}
     >
-      <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+      <motion.div 
+        className="flex flex-col items-center mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <img 
+          src="images/me.jpg" 
+          alt="Arturo" 
+          className={`w-40 h-40 object-cover object-top rounded-full border-4 shadow-lg ${darkMode ? "border-green-400" : "border-black"}`}
+        />
+        <p className="mt-4 text-lg font-normal max-w-md">
+          Hi, I'm <span className="font-bold text-green-500">Arturo</span>, a passionate front-end developer who loves crafting elegant and interactive web experiences.
+          I thrive on creating seamless UI/UX designs and continuously improving my coding skills.
+        </p>
+      </motion.div>
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         {typingText}
         <motion.span animate={{ opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 1 }}>
           |
         </motion.span>
       </motion.p>
-      
-      <motion.div className="mt-8 flex flex-wrap justify-center gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
+      <motion.div 
+        className="mt-8 flex flex-wrap justify-center gap-6" 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ duration: 1, delay: 1 }}
+      >
         {technologies.map(({ Icon, color }, index) => (
           <motion.div key={index} className="text-5xl shadow-md" whileHover={{ scale: 1.2 }}>
             <Icon style={{ color }} />
           </motion.div>
         ))}
       </motion.div>
-
       <motion.div className="mt-12">
         <h2 className={`${darkMode ? "text-green-400" : "text-black"}`}>🌍 Languages 🌍</h2>
         <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -57,7 +80,8 @@ const About = ({ darkMode }) => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}>
+                  transition={{ duration: 0.3 }}
+                >
                   <p className="text-sm">{lang.level}</p>
                   <p className="text-sm italic">{lang.description}</p>
                 </motion.div>
@@ -71,6 +95,7 @@ const About = ({ darkMode }) => {
 };
 
 export default About;
+
 
 
 
