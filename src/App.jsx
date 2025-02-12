@@ -16,7 +16,7 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
+    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-gray-100 text-black"}`}>
       {showNavbar && <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} toggleNavbar={() => setShowNavbar(false)} />}
       {!showNavbar && (
         <button
@@ -28,8 +28,8 @@ const App = () => {
       )}
       <main className={`${showNavbar ? "pl-72" : "pl-0"} transition-all`}>
         <Home darkMode={darkMode} />
-        <About />
-        <Projects />
+        <About darkMode={darkMode}/>
+        <Projects darkMode={darkMode}/>
         <Contact />
       </main>
     </div>

@@ -1,8 +1,7 @@
 import React from "react";
 
 const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => (
-  <nav className={`fixed left-0 top-0 h-full w-72 py-10 px-6 flex flex-col items-center space-y-12 transition-all
-    ${darkMode ? "bg-black text-green-400" : "bg-gray-100 text-black"}`}>
+  <nav className="fixed left-0 top-0 h-full w-72 py-10 px-6 flex flex-col items-center space-y-12 transition-all">
     <button 
       onClick={toggleNavbar}
       className="absolute top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition"

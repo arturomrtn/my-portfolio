@@ -25,7 +25,7 @@ const Home = ({ darkMode }) => {
         transition={{ duration: 1.5 }}
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `url('/images/${darkMode ? "kandinskydarkpainting.jpg" : "kandinskybluepainting.jpg"}')`,
+          backgroundImage: `url('/images/${darkMode ? "kandinskydarkpainting.jpg" : "basqui.jpg"}')`,
         }}
       />
       <motion.div

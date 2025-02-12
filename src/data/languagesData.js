@@ -1,11 +1,9 @@
 const languages = [
-    { name: "English", level: "Fluent", description: "I use English daily in work & tech." },
     { name: "Spanish", level: "Native", description: "My mother tongue!" },
-    { name: "French", level: "Basic", description: "Just started learning!" },
-    { name: "Japanese", level: "Basic", description: "Just started learning!" },
-    { name: "Portuguese", level: "Basic", description: "Just started learning!" }
-
-
+    { name: "English", level: "Fluent", description: "I use English daily in work & tech." },
+    { name: "Portuguese", level: "Fluent", description: "Good level, I could practice it for a long time" },
+    { name: "French", level: "Conversational", description: "Recently getting back to train my French skills!" },
+    { name: "Japanese", level: "Basic", description: "Second year learning it and I keep improving!" }
   ];
 
-  export default languages
+  export default languages;
