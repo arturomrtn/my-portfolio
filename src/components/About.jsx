@@ -21,8 +21,7 @@ const About = ({ darkMode }) => {
   return (
     <section
       id="about"
-      className={`min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium font-bold transition-all mt-6
-      ${darkMode ? "bg-black text-green-400" : "bg-gray-100 text-black"}`}
+      className="min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium font-bold transition-all mt-6"
     >
       <motion.div 
         className="flex flex-col items-center mb-8"
@@ -57,7 +56,10 @@ const About = ({ darkMode }) => {
         transition={{ duration: 1, delay: 1 }}
       >
         {technologies.map(({ Icon, color }, index) => (
-          <motion.div key={index} className="text-5xl shadow-md" whileHover={{ scale: 1.2 }}>
+          <motion.div
+          key={index}
+          className="text-5xl shadow-md"
+          whileHover={{ scale: 1.2 }}>
             <Icon style={{ color }} />
           </motion.div>
         ))}

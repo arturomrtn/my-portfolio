@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -16,27 +17,37 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-gray-100 text-black"}`}>
-      {showNavbar && <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} toggleNavbar={() => setShowNavbar(false)} />}
+    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
+      {showNavbar && (
+        <Navbar
+          toggleDarkMode={() => setDarkMode(!darkMode)}
+          darkMode={darkMode}
+          toggleNavbar={() => setShowNavbar(false)}
+        />
+      )}
+
       {!showNavbar && (
         <button
           onClick={() => setShowNavbar(true)}
-          className="fixed top-4 left-4 px-4 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-400 transition z-50"
+          className="fixed top-4 left-4 p-3 bg-cyan-300 text-white rounded-md shadow-md hover:bg-cyan-400 transition z-50"
         >
-          Show Navbar
+          <RxHamburgerMenu size={28} />
         </button>
       )}
+
       <main className={`${showNavbar ? "pl-72" : "pl-0"} transition-all`}>
         <Home darkMode={darkMode} />
-        <About darkMode={darkMode}/>
-        <Projects darkMode={darkMode}/>
+        <About darkMode={darkMode} />
+        <Projects darkMode={darkMode} />
         <Contact />
       </main>
+
     </div>
   );
 };
 
 export default App;
+
 
 
 

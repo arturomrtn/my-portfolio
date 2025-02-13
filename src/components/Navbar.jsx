@@ -1,6 +1,7 @@
 import React from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { GiHeraldicSun } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => {
   const modeStyles = darkMode
@@ -9,20 +10,23 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => {
 
   return (
     <nav className="fixed left-0 top-0 h-full w-72 py-10 px-6 flex flex-col items-center space-y-12 transition-all">
+
       <button 
         onClick={toggleNavbar}
-        className="absolute top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition"
+        className="absolute top-4 left-4 p-3 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition"
       >
-        Hide Navbar
+        <RxCross2 size={24} />
       </button>
       
       <h2 className="text-3xl font-thin mt-12">art.dev</h2>
+
       <button 
         onClick={toggleDarkMode}
         className={`p-3 rounded-full transition duration-300 flex items-center justify-center hover:scale-110 ${modeStyles}`}
       >
-        {darkMode ? <GiHeraldicSun size={28} /> : <BsFillMoonStarsFill size={24} />}
+        {darkMode ? <GiHeraldicSun size={24} /> : <BsFillMoonStarsFill size={24} />}
       </button>
+
       <ul className="flex flex-col text-lg font-light tracking-wide space-y-2">
         {["Home", "About", "Projects", "Contact"].map((item) => (
           <li key={item}>
@@ -37,6 +41,8 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => {
 };
 
 export default Navbar;
+
+
 
 
 
