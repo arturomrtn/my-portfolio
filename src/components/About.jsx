@@ -33,10 +33,10 @@ const About = ({ darkMode }) => {
         <img 
           src="images/me.jpg" 
           alt="Arturo" 
-          className={`w-40 h-40 object-cover object-top rounded-full border-4 shadow-lg ${darkMode ? "border-green-400" : "border-black"}`}
+          className={`w-40 h-40 object-cover object-top rounded-full shadow-lg ${darkMode ? "border-green-400" : "border-black"}`}
         />
         <p className="mt-4 text-lg font-normal max-w-md">
-          Hi, I'm <span className="font-bold text-green-500">Arturo</span>, a passionate front-end developer who loves crafting elegant and interactive web experiences.
+          Hi, I'm <span className="font-bold text-green-500">Arturo</span>, a passionate front-end developer who loves crafting interactive web experiences.
           I thrive on creating seamless UI/UX designs and continuously improving my coding skills.
         </p>
       </motion.div>
