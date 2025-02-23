@@ -1,1 +1,1 @@
-My portfolio is under construction.
+My portfolio is under construction. Using JavaScript, React, Tailwind CSS and Framer Motion.
