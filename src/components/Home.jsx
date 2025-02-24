@@ -7,7 +7,6 @@ import useTypingEffect from "../hooks/useTypingEffect";
 const Home = ({ darkMode }) => {
   const typingText = useTypingEffect(
     [
-      "I'm a Web Developer. Just starting with this! :)",
       "Focused on creating new solutions based on JavaScript.",
       "Let's create something big!",
     ],
@@ -18,9 +17,7 @@ const Home = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className={`relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-cover bg-center font-light transition-all ${
-        darkMode ? "bg-gray-900" : "bg-gray-100"
-      }`}
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-cover bg-center font-light transition-all"
     >
       <motion.div
         initial={{ opacity: 0 }}

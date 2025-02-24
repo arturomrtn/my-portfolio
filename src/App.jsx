@@ -39,7 +39,7 @@ const App = () => {
         <Home darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Projects darkMode={darkMode} />
-        <Contact />
+        <Contact/>
       </main>
 
     </div>

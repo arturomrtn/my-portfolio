@@ -3,7 +3,8 @@ const projects = [
       id: 1,
       title: "Splashgram",
       description: "A website for creating and managing albums with beautiful images",
-      techStack: ["React", "CSS", "Mongo", "Node", "Express"]
+      techStack: ["React", "CSS", "Mongo", "Node", "Express"],
+      link: "https://github.com/arturomrtn/splashgram"
     },
     {
       id: 2,
