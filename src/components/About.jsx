@@ -17,49 +17,58 @@ const About = ({ darkMode }) => {
   );
 
   const [hoveredLanguage, setHoveredLanguage] = useState(null);
+  const baseClassP = "mt-4 text-lg font-normal max-w-md";
 
   return (
     <section
       id="about"
       className="min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium font-bold transition-all mt-6"
     >
-      <motion.div 
-        className="flex flex-col items-center mb-8"
+      <motion.div
+        className="flex flex-col items-center text-left mb-6"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <img 
-          src="images/mypic.jpg" 
-          alt="Arturo" 
-          className={`w-40 h-40 object-cover object-top rounded-full shadow-lg ${darkMode ? "border-green-400" : "border-black"}`}
+        <img
+          src="images/mypic.jpg"
+          alt="Arturo image"
+          className={`w-40 h-40 object-cover object-top mb-6 rounded-full shadow-lg ${darkMode ? "border-green-400" : "border-black"}`}
         />
-        <p className="mt-4 text-lg font-normal max-w-md">
+        <p className={baseClassP}>
           Hi, I'm <span className="font-bold">Arturo</span>, a passionate front-end developer who loves crafting interactive web experiences.
           I thrive on creating seamless UI/UX designs and continuously improving my coding skills.
         </p>
+        <p className={baseClassP}>
+          I completed a Web Development Bootcamp in 2021, where I built full-stack applications and gained hands-on experience with the latest frameworks. Since then, I've continued learning, working on freelance projects, and developing personal applications to improve my skills.
+        </p>
+        <p className={baseClassP}>
+          In 2022, I embarked on a Working Holiday in Australia, an experience that helped me grow both personally and professionally. I developed strong problem-solving, adaptability, and communication skills—all crucial in the tech world.
+        </p>
       </motion.div>
-      <motion.p 
-        initial={{ opacity: 0, y: 20 }} 
-        animate={{ opacity: 1, y: 0 }} 
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
         {typingText}
-        <motion.span animate={{ opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 1 }}>
+        <motion.span
+          animate={{ opacity: [1, 0, 1] }}
+          transition={{ repeat: Infinity, duration: 1 }}>
           |
         </motion.span>
       </motion.p>
-      <motion.div 
-        className="mt-8 flex flex-wrap justify-center gap-6" 
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: 1 }} 
+      <motion.div
+        className="mt-8 flex flex-wrap justify-center gap-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
         {technologies.map(({ Icon, color }, index) => (
           <motion.div
-          key={index}
-          className="text-5xl shadow-md"
-          whileHover={{ scale: 1.2 }}>
+            key={index}
+            className="text-5xl shadow-md"
+            whileHover={{ scale: 1.2 }}>
             <Icon style={{ color }} />
           </motion.div>
         ))}
