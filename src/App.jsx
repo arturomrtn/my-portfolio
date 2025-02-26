@@ -14,6 +14,7 @@ const App = () => {
 
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
+    document.body.style.backgroundColor = darkMode ? "black" : "white";
   }, [darkMode]);
 
   return (
@@ -47,6 +48,15 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
+
+
+
 
 
 

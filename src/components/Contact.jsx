@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen flex flex-col items-center text-center px-6 py-16">
       <motion.h2
-        className="text-3xl font-semibold mb-6 tracking-tight"
+        className="text-3xl mb-6 tracking-tight"
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -20,13 +20,13 @@ const Contact = () => {
       <motion.form
         action="https://formsubmit.co/moretonarturo@gmail.com"
         method="POST"
-        className="w-full max-w-md  p-6 rounded-xl shadow-md border space-y-4"
+        className="w-full max-w-md  p-6 rounded-cxl shadow-md border space-y-4"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thanks" />
+        <input type="hidden" name="_next" value="https://arturowebdev.com" />
 
         <div>
           <label className={baseLabelStyle}>Full Name</label>
