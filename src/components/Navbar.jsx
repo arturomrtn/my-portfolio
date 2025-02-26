@@ -18,7 +18,7 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => {
         <RxCross2 size={24} />
       </button>
       
-      <h2 className="text-3xl font-thin mt-12">art.dev</h2>
+      <h2 className="text-3xl mt-12">art.dev</h2>
 
       <button 
         onClick={toggleDarkMode}
@@ -27,7 +27,7 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar }) => {
         {darkMode ? <GiHeraldicSun size={24} /> : <BsFillMoonStarsFill size={24} />}
       </button>
 
-      <ul className="flex flex-col text-lg font-light tracking-wide space-y-2">
+      <ul className="flex flex-col text-lg space-y-2">
         {["Home", "About", "Projects", "Contact"].map((item) => (
           <li key={item}>
             <a href={`#${item.toLowerCase()}`} className="hover:text-green-400 transition">

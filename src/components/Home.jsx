@@ -81,7 +81,7 @@ const Home = ({ darkMode }) => {
             <FaGithub size={32} />
           </a>
           <a
-            href="images/ArturoCVV01.pdf"
+            href="images/ArturoCVV01U.pdf"
             download
             className="bg-green-500 text-white p-3 rounded-full shadow-md hover:bg-green-400 transform hover:scale-110 transition"
           >

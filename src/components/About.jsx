@@ -25,7 +25,7 @@ const About = ({ darkMode }) => {
       className="min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium font-bold transition-all mt-6"
     >
       <motion.div
-        className="flex flex-col items-center text-left mb-6"
+        className="flex flex-col items-center text-left mb-10"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -43,7 +43,7 @@ const About = ({ darkMode }) => {
           I completed a Web Development Bootcamp in 2021, where I built full-stack applications and gained hands-on experience with the latest frameworks. Since then, I've continued learning, working on freelance projects, and developing personal applications to improve my skills.
         </p>
         <p className={baseClassP}>
-          In 2022, I embarked on a Working Holiday in Australia, an experience that helped me grow both personally and professionally. I developed strong problem-solving, adaptability, and communication skills—all crucial in the tech world.
+          In 2022, I embarked on a Working Holiday in Australia, an experience that helped me grow both personally and professionally. I developed strong problem-solving, adaptability and communication.
         </p>
       </motion.div>
       <motion.p

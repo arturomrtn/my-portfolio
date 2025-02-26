@@ -3,9 +3,10 @@ import { motion, useInView } from "framer-motion";
 
 const ProjectCard = ({ title, description, techStack, link, darkMode, index }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-30% 0px" });
+
   const variants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 }, 
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: { 
       opacity: 1, 
       y: 0, 
@@ -24,6 +25,7 @@ const ProjectCard = ({ title, description, techStack, link, darkMode, index }) =
       variants={variants}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      viewport={{ once: true }}
     >
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="text-sm mt-2">{description}</p>
@@ -44,6 +46,7 @@ const ProjectCard = ({ title, description, techStack, link, darkMode, index }) =
 };
 
 export default ProjectCard;
+
 
 
 
