@@ -40,10 +40,10 @@ const About = ({ darkMode }) => {
           I thrive on creating seamless UI/UX designs and continuously improving my coding skills.
         </p>
         <p className={baseClassP}>
-          I completed a Web Development Bootcamp in 2021, where I built full-stack applications and gained hands-on experience with the latest frameworks. Since then, I've continued learning, working on freelance projects, and developing personal applications to improve my skills.
+          I completed a Web Development Bootcamp in 2021, where I built full-stack applications and gained hands-on experience with the latest frameworks. Since then, I've continued learning, participating on freelance projects, and developing personal applications to improve my skills.
         </p>
         <p className={baseClassP}>
-          In 2022, I embarked on a Working Holiday in Australia, an experience that helped me grow both personally and professionally. I developed strong problem-solving, adaptability and communication.
+          In 2022, I embarked on a Working Holiday in Australia for almost two years, an experience that helped me grow both personally and professionally. I developed strong problem-solving, adaptability and communication.
         </p>
       </motion.div>
       <motion.p
