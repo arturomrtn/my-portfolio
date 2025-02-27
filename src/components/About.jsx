@@ -37,7 +37,6 @@ const About = ({ darkMode }) => {
         />
         <p className={baseClassP}>
           Hi, I'm <span className="font-bold">Arturo</span>, a passionate front-end developer who loves crafting interactive web experiences.
-          I thrive on creating seamless UI/UX designs and continuously improving my coding skills.
         </p>
         <p className={baseClassP}>
           I completed a Web Development Bootcamp in 2021, where I built full-stack applications and gained hands-on experience with the latest frameworks. Since then, I've continued learning, participating on freelance projects, and developing personal applications to improve my skills.

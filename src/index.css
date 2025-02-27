@@ -8,3 +8,7 @@
 body {
     font-family: "Atkinson Hyperlegible Mono", monospace;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
