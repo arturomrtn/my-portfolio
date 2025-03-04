@@ -73,7 +73,7 @@ const About = ({ darkMode }) => {
         ))}
       </motion.div>
       <motion.div className="mt-12">
-        <h2 className={`${darkMode ? "text-green-400" : "text-black"}`}>🌍 Languages 🌍</h2>
+        <h2>🌍 Languages 🌍</h2>
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           {languages.map((lang, index) => (
             <div
@@ -92,7 +92,7 @@ const About = ({ darkMode }) => {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-sm">{lang.level}</p>
+                  <p className="text-sm underline">{lang.level}</p>
                   <p className="text-sm italic">{lang.description}</p>
                 </motion.div>
               )}

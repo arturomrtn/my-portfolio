@@ -7,8 +7,8 @@ import useTypingEffect from "../hooks/useTypingEffect";
 const Home = ({ darkMode }) => {
   const typingText = useTypingEffect(
     [
-      "Focused on creating new solutions based on JavaScript.",
-      "Let's create something big!",
+      "Focused on creating UI based on JavaScript and React.",
+      "Let's build something big!",
     ],
     100,
     2000
@@ -81,7 +81,7 @@ const Home = ({ darkMode }) => {
             <FaGithub size={32} />
           </a>
           <a
-            href="images/ArturoCVV01U.pdf"
+            href="images/ArturoCVVActual01.pdf"
             download
             className="bg-green-500 text-white p-3 rounded-full shadow-md hover:bg-green-400 transform hover:scale-110 transition"
           >

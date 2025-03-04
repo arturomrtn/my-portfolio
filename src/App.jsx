@@ -18,7 +18,7 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
+    <div className={`min-h-screen transition-all  ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
       {showNavbar && (
         <Navbar
           toggleDarkMode={() => setDarkMode(!darkMode)}
