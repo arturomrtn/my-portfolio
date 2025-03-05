@@ -17,7 +17,7 @@ const Home = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-cover bg-center font-light transition-all"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-cover bg-center font-light transition-all w-full overflow-hidden"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -35,10 +35,10 @@ const Home = ({ darkMode }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="relative z-10 flex flex-col items-center"
+        className="relative z-10 flex flex-col items-center w-full max-w-2xl px-4"
       >
         <h1
-          className={`text-6xl font-bold ${
+          className={`text-4xl md:text-6xl font-bold break-words ${
             darkMode ? "text-green-400" : "text-black"
           }`}
         >
@@ -49,9 +49,10 @@ const Home = ({ darkMode }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className={`mt-4 text-xl font-medium min-h-[80px] ${
+          className={`mt-4 text-lg md:text-xl font-medium min-h-[80px] leading-relaxed break-words w-full ${
             darkMode ? "text-green-400" : "text-black"
           }`}
+          style={{ wordBreak: "break-word", overflowWrap: "break-word" }}
         >
           {typingText}
           <motion.span
@@ -94,6 +95,8 @@ const Home = ({ darkMode }) => {
 };
 
 export default Home;
+
+
 
 
 
