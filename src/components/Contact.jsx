@@ -39,7 +39,7 @@ const Contact = () => {
 
       {isSubmitted ? (
         <motion.p
-          className="text-lg text-green-500 font-semibold"
+          className="text-lg font-semibold"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer"
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(
@@ -41,6 +42,7 @@ const App = () => {
         <About darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Contact />
+        <Footer />
       </main>
 
     </div>

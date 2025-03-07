@@ -7,12 +7,7 @@ const ProjectCard = ({ title, description, techStack, link, darkMode, index }) =
 
   const variants = {
     hidden: { opacity: 0, y: 50, scale: 0.9, transition: { duration: 0.4 } },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      scale: 1, 
-      transition: { duration: 0.6, delay: index * 0.1 }
-    },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, delay: index * 0.1 } },
   };
 
   return (
@@ -29,10 +24,10 @@ const ProjectCard = ({ title, description, techStack, link, darkMode, index }) =
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="text-sm mt-2">{description}</p>
 
-      <div className="flex flex-wrap gap-2 mt-3">
-        {techStack.map((tech, idx) => (
-          <span key={idx} className="text-xs border px-2 py-1 rounded">
-            {tech}
+      <div className="gap-2 mt-3 flex justify-center items-center w-full">
+        {techStack.map(({ Icon, color }, idx) => (
+          <span key={idx} className="text-xl">
+            <Icon style={{ color }} />
           </span>
         ))}
       </div>
@@ -45,6 +40,7 @@ const ProjectCard = ({ title, description, techStack, link, darkMode, index }) =
 };
 
 export default ProjectCard;
+
 
 
 

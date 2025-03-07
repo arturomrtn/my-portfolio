@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import useTypingEffect from "../hooks/useTypingEffect";
-import technologies from "../data/technologiesData";
+import { technologies } from "../data/iconsData";
 import languages from "../data/languagesData";
 
 const About = ({ darkMode }) => {

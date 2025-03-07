@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import projects from "../data/projectsData";
+import  projects from "../data/projectsData";
 
 const Projects = ({ darkMode }) => {
   return (
@@ -17,6 +17,7 @@ const Projects = ({ darkMode }) => {
 };
 
 export default Projects;
+
 
 
 
