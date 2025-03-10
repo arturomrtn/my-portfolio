@@ -17,53 +17,37 @@ const Home = ({ darkMode }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-12 sm:px-6 sm:py-16 bg-cover bg-center font-light transition-all w-full overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-cover bg-center font-light transition-all w-full overflow-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+      <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `url('/images/${darkMode ? "kandinskydarkpainting.jpg" : "basqui.jpg"}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage: `url('/images/${
+            darkMode ? "kandinskydarkpainting.jpg" : "basqui.jpg"
+          }')`,
         }}
       />
-
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="relative z-10 flex flex-col items-center w-full max-w-2xl px-4"
+        className="relative z-10 w-full max-w-2xl px-4"
       >
         <h1
-          className={`text-3xl sm:text-5xl font-bold ${
+          className={`text-4xl sm:text-5xl font-bold ${
             darkMode ? "text-green-400" : "text-black"
           }`}
         >
           Hi! I'm Arturo.
         </h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className={`mt-4 text-base sm:text-lg font-medium leading-relaxed w-full ${
+        <p
+          className={`mt-4 text-lg sm:text-xl font-medium leading-relaxed ${
             darkMode ? "text-green-400" : "text-black"
           }`}
         >
           {typingText}
-          <motion.span
-            animate={{ opacity: [1, 0, 1] }}
-            transition={{ repeat: Infinity, duration: 1 }}
-            className="text-green-400"
-          >
-            |
-          </motion.span>
-        </motion.p>
-
-        <div className="mt-4 flex justify-center space-x-4 sm:space-x-6">
+        </p>
+        <div className="mt-6 flex justify-center space-x-5">
           {socials.map(({ name, Icon, color, link }) => (
             <a
               key={name}
@@ -77,9 +61,9 @@ const Home = ({ darkMode }) => {
             </a>
           ))}
           <a
-            href="images/ArturoCVVActual01.pdf"
+            href="images/ArturoCVVActual001.pdf"
             download
-            className="bg-green-500 text-white p-3 rounded-full shadow-md hover:bg-green-400 transform hover:scale-110 transition"
+            className="bg-green-500 text-white p-3 rounded-full shadow-md transform hover:scale-110 transition"
           >
             <HiDocumentDownload size={28} />
           </a>
@@ -90,13 +74,4 @@ const Home = ({ darkMode }) => {
 };
 
 export default Home;
-
-
-
-
-
-
-
-
-
 

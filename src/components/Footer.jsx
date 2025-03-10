@@ -3,7 +3,7 @@ import { socials } from "../data/iconsData";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-6 text-center mt-12">
+    <footer className="w-full py-10 text-center mt-10">
       <div className="flex justify-center space-x-6 mb-4">
         {socials.map(({ name, Icon, color, link }) => (
           <a
@@ -17,11 +17,11 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p className="text-sm">© 2024 Arturo Web Dev | Built with React & Tailwind</p>
+      <p className="text-sm">
+        © 2024 Arturo Web Dev | Built with React & Tailwind
+      </p>
     </footer>
   );
 };
 
 export default Footer;
-
-  

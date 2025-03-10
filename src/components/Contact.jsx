@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const baseLabelStyle = "text-sm font-medium text-gray-700 dark:text-gray-300";
-  const baseInputStyle = "mt-1 w-full px-4 py-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-400 focus:outline-none";
+  
+  const baseLabelStyle = "text-sm font-medium ";
+  const baseInputStyle = "mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-cyan-400 focus:outline-none";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,20 +22,11 @@ const Contact = () => {
           e.target.reset();
         }
       })
-      .catch((error) => console.error("Error al enviar el mensaje", error));
+      .catch((error) => console.error("Error sending message", error));
   };
-
   return (
-    <section id="contact" className="pt-10 pb-20 px-6 text-center">
-      <motion.h2
-        className="text-3xl mb-12 max-w-3xl mx-auto"
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Let's Connect!
-      </motion.h2>
-
+    <section id="contact" className="py-10 px-6 text-center">
+     <h1 className="text-3xl mb-12 max-w-3xl mx-auto">Let's connect!</h1>
       {isSubmitted ? (
         <motion.p
           className="text-lg font-semibold"
@@ -54,22 +45,36 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <input type="hidden" name="_captcha" value="false" />
-
           <div>
             <label className={baseLabelStyle}>Full Name</label>
-            <input type="text" name="name" required placeholder="Your Name" className={baseInputStyle} />
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Your Name"
+              className={baseInputStyle}
+            />
           </div>
-
           <div>
             <label className={baseLabelStyle}>Email</label>
-            <input type="email" name="email" required placeholder="your@email.com" className={baseInputStyle} />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="your@email.com"
+              className={baseInputStyle}
+            />
           </div>
-
           <div>
             <label className={baseLabelStyle}>Message</label>
-            <textarea name="message" required placeholder="Write your message..." rows="4" className={baseInputStyle}></textarea>
+            <textarea
+              name="message"
+              required
+              placeholder="Write your message..."
+              rows="4"
+              className={baseInputStyle}
+            ></textarea>
           </div>
-
           <motion.button
             type="submit"
             className="w-full bg-cyan-300 text-white py-2 rounded-md font-medium hover:bg-cyan-400 transition-all"
@@ -85,9 +90,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
-
-
-
-

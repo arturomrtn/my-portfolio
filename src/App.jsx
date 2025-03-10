@@ -8,9 +8,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
-  });
+
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
   const [showNavbar, setShowNavbar] = useState(window.innerWidth >= 1024);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
@@ -21,12 +20,9 @@ const App = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-      if (window.innerWidth >= 1024) {
-        setShowNavbar(true);
-      } else {
-        setShowNavbar(false);
-      }
+      const isCurrentlyMobile = window.innerWidth < 1024;
+      setIsMobile(isCurrentlyMobile);
+      setShowNavbar(!isCurrentlyMobile);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -34,17 +30,14 @@ const App = () => {
 
   return (
     <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
-      
-      {showNavbar && (
+      {showNavbar ? (
         <Navbar
-          toggleDarkMode={() => setDarkMode((prev) => !prev)}
+          toggleDarkMode={() => setDarkMode(prev => !prev)}
           darkMode={darkMode}
           toggleNavbar={() => setShowNavbar(false)}
           isMobile={isMobile}
         />
-      )}
-
-      {!showNavbar && (
+      ) : (
         <button
           onClick={() => setShowNavbar(true)}
           className="fixed top-4 left-4 p-3 bg-cyan-300 text-white rounded-md shadow-md hover:bg-cyan-400 transition z-50"
@@ -52,8 +45,7 @@ const App = () => {
           <RxHamburgerMenu size={28} />
         </button>
       )}
-
-      <main className={`${showNavbar && !isMobile ? "pl-72" : "pl-0"} transition`}>
+      <main className={`${showNavbar && !isMobile ? "pl-72" : "pl-0"} transition-all`}>
         <Home darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Projects darkMode={darkMode} />
