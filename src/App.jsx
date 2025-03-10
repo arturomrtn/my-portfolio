@@ -5,26 +5,42 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+  const [showNavbar, setShowNavbar] = useState(window.innerWidth >= 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
     document.body.style.backgroundColor = darkMode ? "black" : "white";
   }, [darkMode]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+      if (window.innerWidth >= 1024) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className={`min-h-screen transition-all  ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
+    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
+      
       {showNavbar && (
         <Navbar
-          toggleDarkMode={() => setDarkMode(!darkMode)}
+          toggleDarkMode={() => setDarkMode((prev) => !prev)}
           darkMode={darkMode}
           toggleNavbar={() => setShowNavbar(false)}
+          isMobile={isMobile}
         />
       )}
 
@@ -37,19 +53,22 @@ const App = () => {
         </button>
       )}
 
-      <main className={`${showNavbar ? "pl-72" : "pl-0"} transition-all`}>
+      <main className={`${showNavbar && !isMobile ? "pl-72" : "pl-0"} transition`}>
         <Home darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Contact />
         <Footer />
       </main>
-
     </div>
   );
 };
 
 export default App;
+
+
+
+
 
 
 

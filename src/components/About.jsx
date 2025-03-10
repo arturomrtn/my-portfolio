@@ -22,7 +22,7 @@ const About = ({ darkMode }) => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium font-bold transition-all mt-6"
+      className="min-h-screen flex flex-col items-center text-center px-6 text-xl font-medium transition-all mt-6"
     >
       <motion.div
         className="flex flex-col items-center text-left mb-10"
@@ -74,7 +74,7 @@ const About = ({ darkMode }) => {
       </motion.div>
       <motion.div className="mt-12">
         <h2>🌍 Languages 🌍</h2>
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
+        <div className="flex flex-wrap justify-center gap-4 mt-10">
           {languages.map((lang, index) => (
             <div
               key={index}
@@ -85,7 +85,7 @@ const About = ({ darkMode }) => {
             >
               {lang.name}
               {hoveredLanguage === lang && (
-                <motion.div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 rounded-lg shadow-lg text-center p-3 transition-all
+                <motion.div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 rounded-lg shadow-lg p-3 transition-all
                   ${darkMode ? "bg-gray-100 text-black" : "bg-gray-900 text-white"}`}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}

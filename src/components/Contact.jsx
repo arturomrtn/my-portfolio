@@ -5,8 +5,7 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const baseLabelStyle = "text-sm font-medium text-gray-700 dark:text-gray-300";
-  const baseInputStyle =
-    "mt-1 w-full px-4 py-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-400 focus:outline-none";
+  const baseInputStyle = "mt-1 w-full px-4 py-2 border rounded-md bg-gray-100 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-cyan-400 focus:outline-none";
 
   const handleSubmit = (e) => {
     e.preventDefault();
