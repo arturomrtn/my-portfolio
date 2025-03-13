@@ -52,14 +52,14 @@ const About = ({ darkMode }) => {
       </div>
       <p className="mt-6 max-w-lg text-xl">{typingText}</p>
       <div className="mt-8 flex flex-wrap justify-center gap-6">
-        {technologies.map(({ Icon, color }, index) => (
+        {technologies.map(({ Icon, color, name }, index) => (
           <motion.div
             key={index}
             className="text-5xl shadow-md cursor-pointer"
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Icon style={{ color }} />
+            <Icon style={{ color: name === "Express" ? (darkMode ? "#ffffff" : "#000000") : color, }} />
           </motion.div>
         ))}
       </div>
