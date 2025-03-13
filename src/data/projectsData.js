@@ -16,10 +16,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Berta Store",
-    description: "A website for a clothing store, a freelance project I am currently working on",
-    techStack: getTechIcons(["JavaScript", "React", "Tailwind CSS", "Framer Motion"]),
-    link: "https://github.com/arturomrtn/bertasite",
+    title: "TheKiniela",
+    description: "Web application based on La Quiniela, a traditional sports betting game in Spain. Created with a classmate.",
+    techStack: getTechIcons(["JavaScript", "Express", "Node", "MongoDB"]),
+    link: "https://github.com/TheKiniela/thekiniela",
   },
   {
     id: 3,

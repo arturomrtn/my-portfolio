@@ -26,7 +26,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="py-10 px-6 text-center">
-     <h1 className="text-3xl mb-12 max-w-3xl mx-auto">Let's connect!</h1>
+     <h1 className="text-3xl mb-12 max-w-3xl mx-auto">Let's talk!</h1>
       {isSubmitted ? (
         <motion.p
           className="text-lg font-semibold"

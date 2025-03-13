@@ -11,9 +11,10 @@ const Footer = () => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:opacity-70"
+            className="p-3 rounded-full shadow-md transform hover:scale-110 transition"
+            style={{ backgroundColor: color }}
           >
-            <Icon size={24} style={{ color }} />
+            <Icon size={24}  className="text-white" />
           </a>
         ))}
       </div>

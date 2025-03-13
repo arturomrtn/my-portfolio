@@ -74,13 +74,14 @@ const About = ({ darkMode }) => {
                   ? "bg-gray-800 text-green-400"
                   : "bg-gray-200 text-black"
               }`}
+              onClick={() => setHoveredLanguage(prev => (prev === lang ? null : lang))}
               onMouseEnter={() => setHoveredLanguage(lang)}
               onMouseLeave={() => setHoveredLanguage(null)}
             >
               {lang.name}
               {hoveredLanguage === lang && (
                 <motion.div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 rounded-lg shadow-lg p-3 transition-all ${
+                  className={`absolute bottom-full mb-2 left-1/2 -translate-x-1/2 mt-2 w-48 rounded-lg shadow-lg p-3 transition-all ${
                     darkMode
                       ? "bg-gray-100 text-black"
                       : "bg-gray-900 text-white"

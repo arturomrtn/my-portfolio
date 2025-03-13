@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiDocumentDownload } from "react-icons/hi";
 import useTypingEffect from "../hooks/useTypingEffect";
 import { socials } from "../data/iconsData";
 
@@ -60,13 +59,6 @@ const Home = ({ darkMode }) => {
               <Icon size={28} className="text-white" />
             </a>
           ))}
-          <a
-            href="images/ArturoCVVActual001.pdf"
-            download
-            className="bg-green-500 text-white p-3 rounded-full shadow-md transform hover:scale-110 transition"
-          >
-            <HiDocumentDownload size={28} />
-          </a>
         </div>
       </motion.div>
     </section>

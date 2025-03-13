@@ -11,7 +11,8 @@ export const technologies = [
   { name: "Typescript", Icon: SiTypescript, color: "#3178C6" },
   { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38B2AC" },
   { name: "Bootstrap", Icon: TbBrandBootstrap, color: "#7952B3" },
-  { name: "Git", Icon: FaGitAlt, color: "#F1502F" }
+  { name: "Git", Icon: FaGitAlt, color: "#F1502F" },
+  { name: "Express", Icon: SiExpress, color: "#000000" }
 
 ];
 

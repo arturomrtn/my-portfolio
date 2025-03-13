@@ -8,8 +8,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
-
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("theme") === "dark");
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark"
+  );
   const [showNavbar, setShowNavbar] = useState(window.innerWidth >= 1024);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
@@ -20,19 +21,22 @@ const App = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const isCurrentlyMobile = window.innerWidth < 1024;
-      setIsMobile(isCurrentlyMobile);
-      setShowNavbar(!isCurrentlyMobile);
+      setIsMobile(window.innerWidth < 1024);
+      setShowNavbar(window.innerWidth >= 1024);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className={`min-h-screen transition-all ${darkMode ? "bg-black text-green-400" : "bg-white text-black"}`}>
+    <div
+      className={`min-h-screen transition-all ${
+        darkMode ? "bg-black text-green-400" : "bg-white text-black"
+      }`}
+    >
       {showNavbar ? (
         <Navbar
-          toggleDarkMode={() => setDarkMode(prev => !prev)}
+          toggleDarkMode={() => setDarkMode((prev) => !prev)}
           darkMode={darkMode}
           toggleNavbar={() => setShowNavbar(false)}
           isMobile={isMobile}
@@ -45,7 +49,11 @@ const App = () => {
           <RxHamburgerMenu size={28} />
         </button>
       )}
-      <main className={`${showNavbar && !isMobile ? "pl-72" : "pl-0"} transition-all`}>
+      <main
+        className={`${
+          showNavbar && !isMobile ? "pl-72" : "pl-0"
+        } transition-all`}
+      >
         <Home darkMode={darkMode} />
         <About darkMode={darkMode} />
         <Projects darkMode={darkMode} />
@@ -57,24 +65,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
