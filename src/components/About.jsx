@@ -21,15 +21,13 @@ const About = ({ darkMode }) => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col items-center text-center px-6 py-6 text-lg transition-all"
+      className="min-h-screen flex flex-col items-center text-center px-6 py-6 text-lg transition-all "
     >
       <div className="flex flex-col items-center text-left mb-10">
         <img
           src="images/mypic.jpg"
           alt="Arturo image"
-          className={`w-40 h-40 object-cover object-top mb-6 rounded-full shadow-lg ${
-            darkMode ? "border-green-400" : "border-black"
-          }`}
+          className="w-40 h-40 object-cover object-top mb-6 rounded-full shadow-lg"
         />
         <div className="max-w-md space-y-4">
           <p>
@@ -45,7 +43,7 @@ const About = ({ darkMode }) => {
           <p>
             In 2022, I embarked on a Working Holiday in Australia for almost two
             years, an experience that helped me grow personally and
-            professionally. I developed strong problem-solving, adaptability,
+            professionally. I developed strong problem-solving, adaptability
             and communication.
           </p>
         </div>

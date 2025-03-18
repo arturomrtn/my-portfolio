@@ -12,9 +12,7 @@ const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar, isMobile }) => {
     <nav
       className={`fixed left-0 top-0 h-full ${
         isMobile ? "w-full" : "w-72"
-      } py-10 px-6 flex flex-col items-center space-y-12 transition-all ${
-        darkMode ? "bg-black text-green-400" : "bg-white text-black"
-      } z-50`}
+      } py-10 px-6 flex flex-col items-center space-y-12 transition-all`}
     >
       <button
         onClick={toggleNavbar}

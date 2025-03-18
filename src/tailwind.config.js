@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "atkinson": ["Atkinson Hyperlegible Mono", "monospace"], // FIXED
+        "poppins": ["Poppins", "monospace"],
       },
     },
   },

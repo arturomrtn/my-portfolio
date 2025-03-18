@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   const baseLabelStyle = "text-sm font-medium ";
-  const baseInputStyle = "mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-cyan-400 focus:outline-none";
+  const baseInputStyle =
+    "mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-cyan-400 focus:outline-none";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="py-10 px-6 text-center">
-     <h1 className="text-3xl mb-12 max-w-3xl mx-auto">Let's talk!</h1>
+      <h1 className="text-3xl mb-12 max-w-3xl mx-auto">Let's talk!</h1>
       {isSubmitted ? (
         <motion.p
           className="text-lg font-semibold"

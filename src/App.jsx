@@ -28,6 +28,9 @@ const App = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
+  const toggleNavbar = () => setShowNavbar(false);
+
   return (
     <div
       className={`min-h-screen transition-all ${
@@ -36,9 +39,9 @@ const App = () => {
     >
       {showNavbar ? (
         <Navbar
-          toggleDarkMode={() => setDarkMode((prev) => !prev)}
+          toggleDarkMode={toggleDarkMode}
           darkMode={darkMode}
-          toggleNavbar={() => setShowNavbar(false)}
+          toggleNavbar={toggleNavbar}
           isMobile={isMobile}
         />
       ) : (
@@ -65,3 +68,4 @@ const App = () => {
 };
 
 export default App;
+

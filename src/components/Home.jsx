@@ -29,20 +29,17 @@ const Home = ({ darkMode }) => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1 }}
         className="relative z-10 w-full max-w-2xl px-4"
       >
         <h1
-          className={`text-4xl sm:text-5xl font-bold ${
-            darkMode ? "text-green-400" : "text-black"
-          }`}
+          className="text-4xl sm:text-5xl font-bold"
         >
           Hi! I'm Arturo.
         </h1>
         <p
-          className={`mt-4 text-lg sm:text-xl font-medium leading-relaxed ${
-            darkMode ? "text-green-400" : "text-black"
-          }`}
+          className="mt-4 text-lg sm:text-xl font-medium leading-relaxed"
+            
         >
           {typingText}
         </p>
@@ -66,4 +63,8 @@ const Home = ({ darkMode }) => {
 };
 
 export default Home;
+
+
+
+
 

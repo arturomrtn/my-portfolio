@@ -13,7 +13,7 @@ const useTypingEffect = (texts, speed = 100, delay = 2000) => {
 
     const handleTyping = () => {
       if (isTextEmpty) {
-        setIsDeleting(false);
+        setIsDeleting(false);          
         setIndex((prev) => (prev + 1) % texts.length);
         setCharIndex(0);
         return;
