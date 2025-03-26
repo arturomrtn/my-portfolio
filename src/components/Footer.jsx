@@ -19,7 +19,7 @@ const Footer = () => {
         ))}
       </div>
       <p className="text-sm">
-        © 2024 Arturo Web Dev | Built with React & Tailwind
+        © 2025 Arturo Web Dev | Built with React & Tailwind
       </p>
     </footer>
   );
