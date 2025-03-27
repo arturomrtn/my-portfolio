@@ -25,7 +25,7 @@ export const socials = [
 ];
 
 export const navbarIcons = [
-{name: "Moon", Icon: BsFillMoonStarsFill, color: "bg-gradient-to-b from-[#4682B4] to-[#87CEEB] text-[#DAA520] shadow-[0_0_8px_#DAA520] hover:shadow-[0_0_15px_#DAA520]"},
-{name: "Sun", Icon: GiHeraldicSun, color: "bg-gradient-to-b from-black to-[#1E3A8A] text-[#F5DEB3] shadow-[0_0_12px_#F5DEB3] hover:shadow-[0_0_20px_#F5DEB3]"},
+{name: "Moon", Icon: BsFillMoonStarsFill, color: "bg-gradient-to-b from-black to-[#1E3A8A] text-[#F5DEB3] shadow-[0_0_12px_#F5DEB3] hover:shadow-[0_0_20px_#F5DEB3]"},
+{name: "Sun", Icon: GiHeraldicSun, color: "bg-gradient-to-b from-[#4682B4] to-[#87CEEB] text-[#DAA520] shadow-[0_0_8px_#DAA520] hover:shadow-[0_0_15px_#DAA520]"},
 {name: "Cross", Icon: RxCross2, color: "bg-red-500 text-white rounded-md shadow-md hover:bg-red-600"}
 ]

@@ -2,9 +2,12 @@ import React from "react";
 import { navbarIcons } from "./../data/iconsData";
 
 const Navbar = ({ toggleDarkMode, darkMode, toggleNavbar, isMobile }) => {
-  const darkModeIcon = navbarIcons.find((icon) => icon.name === "Sun");
-  const lightModeIcon = navbarIcons.find((icon) => icon.name === "Moon");
-  const closeIcon = navbarIcons.find((icon) => icon.name === "Cross");
+  const icons = navbarIcons.reduce((acc, icon) => {
+    acc[icon.name] = icon;
+    return acc;
+  }, {});
+  
+  const { Sun: darkModeIcon, Moon: lightModeIcon, Cross: closeIcon } = icons;
 
   return (
     <nav
