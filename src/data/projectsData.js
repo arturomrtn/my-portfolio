@@ -17,16 +17,16 @@ const projects = [
   {
     id: 2,
     title: "TheKiniela",
-    description: "Web application based on La Quiniela, a traditional sports betting game in Spain. Created with a classmate.",
+    description: "Web application based on La Quiniela, a traditional sports betting game in Spain. Created with a mate.",
     techStack: getTechIcons(["JavaScript", "Express", "Node", "MongoDB"]),
     link: "https://github.com/TheKiniela/thekiniela",
   },
   {
     id: 3,
-    title: "PokePlace",
-    description: "Fullstack web app built to get info about Pokemon using an external API",
-    techStack: getTechIcons(["JavaScript", "React", "Express"]),
-    link: "https://github.com/arturomrtn/pokeplace",
+    title: "NextWeatherApp",
+    description: "Web app created to get info about weather using external APIs",
+    techStack: getTechIcons(["JavaScript", "React", "Next.js"]),
+    link: "https://mynextweatherapp.vercel.app/",
   },
 ];
 

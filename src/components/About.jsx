@@ -57,7 +57,10 @@ const About = ({ darkMode }) => {
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Icon style={{ color: name === "Express" ? (darkMode ? "#ffffff" : "#000000") : color, }} />
+            <Icon style={{ color:
+            (name === "Express" || name === "Next.js")
+              ? (darkMode ? "#ffffff" : "#000000")
+              : color, }} />
           </motion.div>
         ))}
       </div>

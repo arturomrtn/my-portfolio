@@ -1,5 +1,5 @@
 import { FaReact, FaJs, FaNodeJs, FaCss3Alt, FaGitAlt, FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiTypescript, SiExpress } from "react-icons/si";
+import { SiTailwindcss, SiMongodb, SiTypescript, SiExpress, SiNextdotjs } from "react-icons/si";
 import { TbBrandBootstrap } from "react-icons/tb";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { GiHeraldicSun } from "react-icons/gi";
@@ -15,7 +15,8 @@ export const technologies = [
   { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#38B2AC" },
   { name: "Bootstrap", Icon: TbBrandBootstrap, color: "#7952B3" },
   { name: "Git", Icon: FaGitAlt, color: "#F1502F" },
-  { name: "Express", Icon: SiExpress, color: "#000000" }
+  { name: "Express", Icon: SiExpress, color: "#000000" },
+  { name: "Next.js", Icon: SiNextdotjs, color: "#000000" }
 
 ];
 
